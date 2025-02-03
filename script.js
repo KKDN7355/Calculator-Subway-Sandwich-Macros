@@ -128,12 +128,8 @@ function calculateMacros() {
 
     // Results
     const resultDiv = document.createElement("div");
-    resultDiv.className = "alert alert-info mt-4 mb-4 p-4 font-monospace ";
-    resultDiv.style.display = "block";
-    resultDiv.style.margin = "0 auto";
-    resultDiv.style.textAlign = "center";
-    resultDiv.style.fontFamily = "'Courier New', Courier, monospace";
-    resultDiv.style.width = "fit-content";
+    resultDiv.className = "alert result-alert";
+
     resultDiv.innerHTML = `
         kCal: ${totalMacros.cal}
         <br>
