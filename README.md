@@ -6,6 +6,8 @@ Subway AU Macro Calculator is a JavaScript-based tool that allows users to calcu
 
 These instructions will guide you through getting a copy of the project up and running on your local machine for development and testing purposes.
 
+Purely so if anyone wanted to try it out, they can do so here: https://kkdn7355.github.io/Calculator-Subway-Sandwich-Macros/
+
 ### Prerequisites
 
 - **Web Browser**: A modern web browser (Google Chrome, Mozilla Firefox, etc.) is required to use the calculator.
