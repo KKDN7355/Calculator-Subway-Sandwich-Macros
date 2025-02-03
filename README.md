@@ -1,0 +1,57 @@
+# Subway AU Macro Calculator
+
+Subway AU Macro Calculator is a JavaScript-based tool that allows users to calculate the nutritional values of their Subway sandwich based on selected ingredients. This project utilizes HTML, JavaScript, and Bootstrap to provide an interactive user experience. Users can select bread type, meat, cheese, salads, sauces, and extras to compute the total macronutrients (calories, protein, fat, carbohydrates) of their custom Subway sandwich.
+
+## Getting Started
+
+These instructions will guide you through getting a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- **Web Browser**: A modern web browser (Google Chrome, Mozilla Firefox, etc.) is required to use the calculator.
+
+No installation of additional software is needed.
+
+### Installing
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/subway-macro-calculator.git
+   cd subway-macro-calculator
+   ```
+
+2. Open `index.html` in your browser:
+   ```bash
+   open index.html  # For macOS
+   start index.html  # For Windows
+   ```
+
+The Subway AU Macro Calculator should now be running in your browser.
+
+## Using the Calculator
+
+1. Select your preferred sandwich ingredients including bread type, meat, cheese, salads, and sauces.
+2. Click the **Calculate** button to display the total macronutrients.
+3. The results will be shown in a formatted display with values for Calories, Protein, Fat, and Carbohydrates.
+
+### Features
+
+- **Ingredient Selection**: Choose from various breads, meats, cheeses, salads, and sauces.
+- **Real-time Macro Calculation**: Compute the total macronutrients instantly based on selected options.
+- **User-friendly Interface**: Designed with Bootstrap for a smooth and interactive experience.
+- **Error Handling**: Alerts users if any required selections are missing or incorrect.
+
+## Built With
+
+* **HTML5** - For structuring the web interface
+* **CSS & Bootstrap** - For styling and responsive design
+* **JavaScript** - For handling calculations and user interactions
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+* Inspired by the need for a customizable Subway nutrition calculator (because their app actually has discounts around this period).
+* Special thanks to contributors for suggestions and feedback.
