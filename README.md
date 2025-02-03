@@ -14,22 +14,6 @@ Purely so if anyone wanted to try it out, they can do so here: https://kkdn7355.
 
 No installation of additional software is needed.
 
-### Installing
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/subway-macro-calculator.git
-   cd subway-macro-calculator
-   ```
-
-2. Open `index.html` in your browser:
-   ```bash
-   open index.html  # For macOS
-   start index.html  # For Windows
-   ```
-
-The Subway AU Macro Calculator should now be running in your browser.
-
 ## Using the Calculator
 
 1. Select your preferred sandwich ingredients including bread type, meat, cheese, salads, and sauces.
