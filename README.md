@@ -2,6 +2,10 @@
 
 Subway AU Macro Calculator is a JavaScript-based tool that allows users to calculate the nutritional values of their Subway sandwich based on selected ingredients. This project utilizes HTML, JavaScript, and Bootstrap to provide an interactive user experience. Users can select bread type, meat, cheese, salads, sauces, and extras to compute the total macronutrients (calories, protein, fat, carbohydrates) of their custom Subway sandwich.
 
+
+![Screenshot](Screenshot.png)
+
+
 ## Getting Started
 
 These instructions will guide you through getting a copy of the project up and running on your local machine for development and testing purposes.
