@@ -8,368 +8,297 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-light">
-    <div class="
-        container rounded shadow
-        mt-2
-        mb-2
-        p-2
-        w-100" style="max-width: 600px;">
-        <h1 class="
-            text-center
-            fs-3
-            fw-bold">
-            <span>
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" class="flag-icon">
-            </span>
-            <br>
-            <span class="text-yellow text-decoration-underline">SUB</span><span class="text-green text-decoration-underline">WAY</span>
-            <br>
-            <span class="text-yellow text-decoration-underline">Macro</span><span class="text-green text-decoration-underline">Calculator</span>
+    <div class="container rounded shadow w-100 mb-2 mt-2 p-2">
+        <h1 class="fw-bold text-center fs-3">
+            <span><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" class="flag-icon"></span>
+            <span class="text-yellow">SUB</span><span class="text-green">WAY</span>
+            <span><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" class="flag-icon"></span>
         </h1>
 
         <form id="macro-form">
-            <div class="
-                border rounded-top rounded-bottom rounded-left rounded-right
-                brown-border
-                border-4
-                mt-2
-                mb-2
-                p-2">
-                <h3 class="
-                    text-decoration-underline
-                    fw-bold
-                    fs-5
-                    brown-heading-main">Pick a Bread:</h3>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+            <button type="button" onclick="randomise()" class="w-100 btn btn-btn fw-bold fs-4 mt-2 mb-2">
+                Randomise
+            </button>
+            <div class="border rounded-top rounded-bottom rounded-left rounded-right brown-border border-4 mt-2 mb-2 p-2">
+                <h3 class="brown-heading-main fw-bold text-decoration-underline fs-5">
+                    Pick a Bread:
+                </h3>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="radio" id="bread_zero" name="bread_amount" value="none"
-                            class="
-                                form-check-input
-                                brown-form-check-input"> 
-                        <label for="bread_zero" class="form-check-label">None</label>
+                        <input type="radio" id="bread_zero" name="bread_amount" value="none" class="form-check-input brown-form-check-input"> 
+                        <label for="bread_zero" class="form-check-label">
+                            None
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="radio" id="bread_six" name="bread_amount" value="single"
-                            class="
-                                form-check-input
-                                brown-form-check-input"> 
-                        <label for="bread_six" class="form-check-label">06"</label>
+                        <input type="radio" id="bread_six" name="bread_amount" value="single" class="form-check-input brown-form-check-input"> 
+                        <label for="bread_six" class="form-check-label">
+                            06"
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="radio" id="bread_twelve" name="bread_amount" value="double"
-                            class="
-                                form-check-input
-                                brown-form-check-input"
-                                checked>
-                        <label for="bread_twelve" class="form-check-label">12"</label>
+                        <input type="radio" id="bread_twelve" name="bread_amount" value="double" class="form-check-input brown-form-check-input" checked>
+                        <label for="bread_twelve" class="form-check-label">
+                            12"
+                        </label>
                     </div>
                 </div>
-                <h4 class="
-                    text-decoration-underline
-                    fw-bold
-                    fs-6
-                    brown-heading-sub">Choose Your Bread:</h4>
-                <select id="bread_type"
-                    class="
-                        form-select
-                        mb-2
-                        brown-select">
-                    <option value="italian_herbs_and_cheese">   Italian Herbs & Cheese</option>
-                    <option value="malted_rye">                 Malted Rye</option>
-                    <option value="wheat">                      Wheat</option>
-                    <option value="white" selected>             White</option>
+                <h4 class="text-decoration-underline fw-bold fs-6 brown-heading-sub">
+                    Choose Your Bread:
+                </h4>
+                <select id="bread_type" class="form-select brown-select w-100 mb-2">
+                    <option value="italian_herbs_and_cheese">
+                        Italian Herbs & Cheese
+                    </option>
+                    <option value="malted_rye">
+                        Malted Rye
+                    </option>
+                    <option value="wheat">
+                        Wheat
+                    </option>
+                    <option value="white" selected>
+                        White
+                    </option>
                 </select>
             </div>
-            <div class="
-                border rounded-top rounded-bottom rounded-left rounded-right
-                border-4
-                mt-2
-                mb-2
-                p-2
-                red-border">
-                <h3 class="
-                    text-decoration-underline
-                    fs-5
-                    fw-bold
-                    red-heading-main">Pick a Meat:</h3>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+            <div class="border rounded-top rounded-bottom rounded-left rounded-right red-border border-4 mt-2 mb-2 p-2">
+                <h3 class="fw-bold text-decoration-underline red-heading-main fs-5">
+                    Pick a Meat:
+                </h3>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="radio" id="meat_zero" name="meat_amount" value="none"
-                            class="
-                                form-check-input
-                                red-form-check-input">
-                        <label for="meat_zero" class="form-check-label">None</label>
+                        <input type="radio" id="meat_zero" name="meat_amount" value="none" class="form-check-input red-form-check-input">
+                        <label for="meat_zero" class="form-check-label">
+                            None
+                        </label>
                     </div>
                     <div class="col form-check">
                         <input type="radio" id="meat_one" name="meat_amount" value="single"
-                            class="
-                                form-check-input
-                                red-form-check-input">
-                        <label for="meat_one" class="form-check-label">Single</label>
+                            class="form-check-input red-form-check-input">
+                        <label for="meat_one" class="form-check-label">
+                            Single
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="radio" id="meat_two" name="meat_amount" value="double"
-                            class="
-                                form-check-input
-                                red-form-check-input"
-                                checked>
-                        <label for="meat_two" class="form-check-label">Double</label>
+                        <input type="radio" id="meat_two" name="meat_amount" value="double" class="form-check-input red-form-check-input" checked>
+                        <label for="meat_two" class="form-check-label">
+                            Double
+                        </label>
                     </div>
                 </div>
-                <h4 class="
-                    text-decoration-underline
-                    fs-6
-                    fw-bold
-                    red-heading-sub">Choose Your Meat:</h4>
+                <h4 class="fw-bold text-decoration-underline red-heading-sub fs-6">
+                    Choose Your Meat:
+                </h4>
                 <select id="meat_type"
-                    class="
-                        form-select
-                        mb-2
-                        red-select">
-                    <option value="buffalo_chicken">Buffalo Chicken</option>
-                    <option value="chicken_and_bacon_ranch_melt">Chicken & Bacon Ranch Melt</option>
-                    <option value="chicken_classic">Chicken Classic</option>
-                    <option value="chicken_schnitzel" selected>Chicken Schnitzel</option>
-                    <option value="chicken_strips">Chicken Strips</option>
-                    <option value="chicken_teriyaki">Chicken Teriyaki</option>
-                    <option value="italian_bmt">Italian B.M.T.</option>
-                    <option value="leg_ham">Leg Ham</option>
-                    <option value="meatball_melt">Meatball Melt</option>
-                    <option value="pizza_melt">Pizza Melt</option>
-                    <option value="seafood_sensation">Seafood Sensation</option>
-                    <option value="smashed_falafel">Smashed Falafel</option>
-                    <option value="southern_style_chicken">Southern Style Chicken</option>
-                    <option value="steak_melt">Steak Melt</option>
-                    <option value="tuna_and_mayo">Tuna & Mayo</option>
-                    <option value="turkey">Turkey</option>
-                    <option value="veggie_patty">Veggie Patty</option>
+                    class="form-select red-select w-100 mb-2">
+                    <option value="buffalo_chicken">
+                        Buffalo Chicken
+                    </option>
+                    <option value="chicken_and_bacon_ranch_melt">
+                        Chicken & Bacon Ranch Melt
+                    </option>
+                    <option value="chicken_classic">
+                        Chicken Classic
+                    </option>
+                    <option value="chicken_schnitzel" selected>
+                        Chicken Schnitzel
+                    </option>
+                    <option value="chicken_strips">
+                        Chicken Strips
+                    </option>
+                    <option value="chicken_teriyaki">
+                        Chicken Teriyaki
+                    </option>
+                    <option value="italian_bmt">
+                        Italian B.M.T.
+                    </option>
+                    <option value="leg_ham">
+                        Leg Ham
+                    </option>
+                    <option value="meatball_melt">
+                        Meatball Melt
+                    </option>
+                    <option value="pizza_melt">
+                        Pizza Melt
+                    </option>
+                    <option value="seafood_sensation">
+                        Seafood Sensation
+                    </option>
+                    <option value="smashed_falafel">
+                        Smashed Falafel
+                    </option>
+                    <option value="southern_style_chicken">
+                        Southern Style Chicken
+                    </option>
+                    <option value="steak_melt">
+                        Steak Melt
+                    </option>
+                    <option value="tuna_and_mayo">
+                        Tuna & Mayo
+                    </option>
+                    <option value="turkey">
+                        Turkey
+                    </option>
+                    <option value="veggie_patty">
+                        Veggie Patty
+                    </option>
                 </select>
-                <h4 class="
-                    text-decoration-underline
-                    fs-6
-                    fw-bold
-                    red-heading-sub">Additional Meats:</h4>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+                <h4 class="fw-bold text-decoration-underline red-heading-sub fs-6">
+                    Additional Meats:
+                </h4>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="checkbox" id="pepperoni" name="meat_extra" value="pepperoni"
-                            class="
-                                form-check-input
-                                red-form-check-input">
-                        <label for="pepperoni" class="form-check-label">Pepperoni</label>
+                        <input type="checkbox" id="pepperoni" name="meat_extra" value="pepperoni" class="form-check-input red-form-check-input">
+                        <label for="pepperoni" class="form-check-label">
+                            Pepperoni
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="smoky_bacon" name="meat_extra" value="smoky_bacon"
-                            class="
-                                form-check-input
-                                red-form-check-input">
-                        <label for="smoky_bacon" class="form-check-label">Bacon</label>
+                        <input type="checkbox" id="smoky_bacon" name="meat_extra" value="smoky_bacon" class="form-check-input red-form-check-input">
+                        <label for="smoky_bacon" class="form-check-label">
+                            Bacon
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="
-                border rounded-top rounded-bottom rounded-left rounded-right
-                border-4
-                mt-2
-                mb-2
-                p-2
-                yellow-border">
-                <h3 class="
-                    text-decoration-underline
-                    fs-5
-                    fw-bold
-                    yellow-heading-main">Pick a Cheese:</h3>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+            <div class="border rounded-top rounded-bottom rounded-left rounded-right yellow-border border-4 mt-2 mb-2 p-2">
+                <h3 class="fw-bold text-decoration-underline yellow-heading-main fs-5">
+                    Pick a Cheese:
+                </h3>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="radio" id="cheese_zero" name="cheese_amount" value="none"
-                            class="
-                                form-check-input
-                                yellow-form-check-input">
-                        <label for="cheese_zero" class="form-check-label">None</label>
+                        <input type="radio" id="cheese_zero" name="cheese_amount" value="none" class="form-check-input yellow-form-check-input">
+                        <label for="cheese_zero" class="form-check-label">
+                            None
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="radio" id="cheese_one" name="cheese_amount" value="single"
-                            class="
-                                form-check-input
-                                yellow-form-check-input"
-                                checked>
-                        <label for="cheese_one" class="form-check-label">Single</label>
+                        <input type="radio" id="cheese_one" name="cheese_amount" value="single" class="form-check-input yellow-form-check-input" checked>
+                        <label for="cheese_one" class="form-check-label">
+                            Single
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="radio" id="cheese_two" name="cheese_amount" value="double"
-                            class="
-                                form-check-input
-                                yellow-form-check-input">
-                        <label for="cheese_two" class="form-check-label">Double</label>
+                        <input type="radio" id="cheese_two" name="cheese_amount" value="double" class="form-check-input yellow-form-check-input">
+                        <label for="cheese_two" class="form-check-label">
+                            Double
+                        </label>
                     </div>
                 </div>
-                <h4 class="
-                    text-decoration-underline    
-                    fs-6
-                    fw-bold
-                    yellow-heading-sub">Choose Your Cheese:</h4>
-                <select id="cheese_type"
-                    class="
-                        form-select
-                        mb-2
-                        yellow-select">
-                    <option value="mozzarella">Mozzarella</option>
-                    <option value="natural_cheddar">Natural Cheddar</option>
-                    <option value="old_english">Old English</option>
+                <h4 class="fw-bold text-decoration-underline yellow-heading-sub fs-6">
+                    Choose Your Cheese:
+                </h4>
+                <select id="cheese_type" class="form-select yellow-select w-100 mb-2">
+                    <option value="mozzarella">
+                        Mozzarella
+                    </option>
+                    <option value="natural_cheddar">
+                        Natural Cheddar
+                    </option>
+                    <option value="old_english">
+                        Old English
+                    </option>
                 </select>
             </div>
-            <div class="
-                border rounded-top rounded-bottom rounded-left rounded-right
-                green-border
-                border-4
-                mt-2
-                mb-2
-                p-2">
-                <h3 class="
-                    text-decoration-underline
-                    fs-5
-                    fw-bold
-                    green-heading-main">Pick Salads:</h3>
-                <h4 class="
-                    text-decoration-underline
-                    fs-6
-                    fw-bold
-                    green-heading-sub">Main:</h4>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+            <div class="border rounded-top rounded-bottom rounded-left rounded-right green-border border-4 mt-2 mb-2 p-2">
+                <h3 class=" fw-bold text-decoration-underline green-heading-main fs-5">
+                    Pick Salads:
+                </h3>
+                <h4 class="fw-bold text-decoration-underline green-heading-sub fs-6">
+                    Main:
+                </h4>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="checkbox" id="capsicum" name="salads_type" value="capsicum"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="capsicum" class="form-check-label">Capsicum</label>
+                        <input type="checkbox" id="capsicum" name="salads_type" value="capsicum" class="form-check-input green-form-check-input" checked>
+                        <label for="capsicum" class="form-check-label">
+                            Capsicum
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="carrots" name="salads_type" value="carrots"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="carrots" class="form-check-label">Carrots</label>
+                        <input type="checkbox" id="carrots" name="salads_type" value="carrots" class="form-check-input green-form-check-input" checked>
+                        <label for="carrots" class="form-check-label">
+                            Carrots
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="cucumber" name="salads_type" value="cucumber"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="cucumber" class="form-check-label">Cucumber</label>
+                        <input type="checkbox" id="cucumber" name="salads_type" value="cucumber" class="form-check-input green-form-check-input" checked>
+                        <label for="cucumber" class="form-check-label">
+                            Cucumber
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="jalapenos" name="salads_type" value="jalapenos"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="jalapenos" class="form-check-label">Jalapenos</label>
+                        <input type="checkbox" id="jalapenos" name="salads_type" value="jalapenos" class="form-check-input green-form-check-input" checked>
+                        <label for="jalapenos" class="form-check-label">
+                            Jalapenos
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="lettuce" name="salads_type" value="lettuce"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="lettuce" class="form-check-label">Lettuce</label>
+                        <input type="checkbox" id="lettuce" name="salads_type" value="lettuce" class="form-check-input green-form-check-input" checked>
+                        <label for="lettuce" class="form-check-label">
+                            Lettuce
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="olives" name="salads_type" value="olives"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="olives" class="form-check-label">Olives</label>
+                        <input type="checkbox" id="olives" name="salads_type" value="olives" class="form-check-input green-form-check-input" checked>
+                        <label for="olives" class="form-check-label">
+                            Olives
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="onions" name="salads_type" value="onions"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="onions" class="form-check-label">Onions</label>
+                        <input type="checkbox" id="onions" name="salads_type" value="onions" class=" form-check-input green-form-check-input" checked>
+                        <label for="onions" class="form-check-label">
+                            Onions
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="pickles" name="salads_type" value="pickles"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="pickles" class="form-check-label">Pickles</label>
+                        <input type="checkbox" id="pickles" name="salads_type" value="pickles" class="form-check-input green-form-check-input" checked>
+                        <label for="pickles" class="form-check-label">
+                            Pickles
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="spinach" name="salads_type" value="spinach"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="spinach" class="form-check-label">Spinach</label>
+                        <input type="checkbox" id="spinach" name="salads_type" value="spinach" class="form-check-input green-form-check-input" checked>
+                        <label for="spinach" class="form-check-label">
+                            Spinach
+                        </label>
                     </div>
                     <div class="col form-check">
                         <input type="checkbox" id="tomato" name="salads_type" value="tomato"
-                            class="
-                                form-check-input
-                                green-form-check-input" checked>
-                        <label for="tomato" class="form-check-label">Tomato</label>
+                            class="form-check-input green-form-check-input" checked>
+                        <label for="tomato" class="form-check-label">
+                            Tomato
+                        </label>
                     </div>
                 </div>
-                <h4 class="
-                    text-decoration-underline
-                    fs-6
-                    fw-bold
-                    green-heading-sub">Bonus:</h4>
-                <div class="
-                    row row-cols-3
-                    gx-0
-                    gy-0">
+                <h4 class="fw-bold text-decoration-underline green-heading-sub fs-6">
+                    Bonus:
+                </h4>
+                <div class="row row-cols-3 gx-0 gy-0">
                     <div class="col form-check">
-                        <input type="checkbox" id="avocado" name="salads_extra" value="avocado"
-                            class="
-                                form-check-input
-                                green-form-check-input">
-                        <label for="avocado" class="form-check-label">Avocado</label>
+                        <input type="checkbox" id="avocado" name="salads_extra" value="avocado" class="form-check-input green-form-check-input">
+                        <label for="avocado" class="form-check-label">
+                            Avocado
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="beetroot" name="salads_extra" value="beetroot"
-                            class="
-                                form-check-input
-                                green-form-check-input">
-                        <label for="beetroot" class="form-check-label">Beetroot</label>
+                        <input type="checkbox" id="beetroot" name="salads_extra" value="beetroot" class="form-check-input green-form-check-input">
+                        <label for="beetroot" class="form-check-label">
+                            Beetroot
+                        </label>
                     </div>
                     <div class="col form-check">
-                        <input type="checkbox" id="pineapple" name="salads_extra" value="pineapple"
-                            class="
-                                form-check-input
-                                green-form-check-input">
-                        <label for="pineapple" class="form-check-label">Pineapple</label>
+                        <input type="checkbox" id="pineapple" name="salads_extra" value="pineapple" class="form-check-input green-form-check-input">
+                        <label for="pineapple" class="form-check-label">
+                            Pineapple
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="
-                border rounded-top rounded-bottom rounded-left rounded-right
-                border-4
-                mt-2
-                mb-2
-                p-2
-                brown-border">
-                <h3 class="
-                    text-decoration-underline
-                    fs-5
-                    fw-bold
-                    brown-heading-main">Pick a Sauce:</h3>
-                <select id="sauce_type"
-                    class="
-                        form-select
-                        mb-2
-                        brown-select">
+            <div class="border rounded-top rounded-bottom rounded-left rounded-right brown-border border-4 mt-2 mb-2 p-2">
+                <h3 class="fw-bold text-decoration-underline fs-5 brown-heading-main">
+                    Pick a Sauce:
+                </h3>
+                <select id="sauce_type" class="form-select brown-select w-100 mb-2">
                     <option value="blue_cheese_dressing">       Blue Cheese Dressing</option>
                     <option value="chipotle_southwest">         Chipotle Southwest</option>
                     <option value="garlic_aioli">               Garlic Aioli</option>
@@ -387,13 +316,9 @@
                     <option value="tomato">                     Tomato</option>
                 </select>
             </div>
-            <button type="button"
-                class="
-                    btn btn-btn
-                    fs-4
-                    fw-bold
-                    mt-4
-                    w-100" onclick="calculateMacros()">Calculate</button>
+            <button type="button" onclick="calculateMacros()" class="w-100 btn btn-btn fw-bold fs-4 mt-4">
+                Calculate
+            </button>
         </form>
     </div>
 

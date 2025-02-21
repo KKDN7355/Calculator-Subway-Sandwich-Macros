@@ -7,6 +7,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
 });
 
+function randomise() {
+    // Ensure macro data is loaded.
+    if (!macrosData) {
+        alert("Error: Macro data not loaded correctly.");
+        return;
+    }
+
+    function getRandomElement(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    // Randomly select a bread size.
+    const breadSizes = ["none", "single", "double"];
+    document.querySelector(`input[name="bread_amount"][value="${getRandomElement(breadSizes)}"]`).checked = true;
+
+    // Randomly select a bread type.
+    const breadOptions = Array.from(document.querySelectorAll("#bread_type option"));
+    document.getElementById("bread_type").value = getRandomElement(breadOptions.map(option => option.value));
+
+    // Randomly select a meat size.
+    const meatSizes = ["none", "single", "double"];
+    document.querySelector(`input[name="meat_amount"][value="${getRandomElement(meatSizes)}"]`).checked = true;
+
+    // Randomly select a meat type.
+    const meatOptions = Array.from(document.querySelectorAll("#meat_type option"));
+    document.getElementById("meat_type").value = getRandomElement(meatOptions.map(option => option.value));
+
+    // Randomly select meat extras.
+    const meatExtras = Array.from(document.querySelectorAll('input[name="meat_extra"]'));
+    meatExtras.forEach(meat => meat.checked = Math.random() < 0.5);
+
+    // Randomly select a cheese size.
+    const cheeseSizes = ["none", "single", "double"];
+    document.querySelector(`input[name="cheese_amount"][value="${getRandomElement(cheeseSizes)}"]`).checked = true;
+
+    // Randomly select a cheese type.
+    const cheeseOptions = Array.from(document.querySelectorAll("#cheese_type option"));
+    document.getElementById("cheese_type").value = getRandomElement(cheeseOptions.map(option => option.value));
+
+    // Randomly select salads.
+    const saladOptions = Array.from(document.querySelectorAll('input[name="salads_type"]'));
+    saladOptions.forEach(salad => salad.checked = Math.random() < 0.5);
+
+    // Randomly select salad extras.
+    const saladExtras = Array.from(document.querySelectorAll('input[name="salads_extra"]'));
+    saladExtras.forEach(extra => extra.checked = Math.random() < 0.5);
+
+    // Randomly select a sauce.
+    const sauceOptions = Array.from(document.querySelectorAll("#sauce_type option"));
+    document.getElementById("sauce_type").value = getRandomElement(sauceOptions.map(option => option.value));
+}
+
 function calculateMacros() {
     // Ensure macro data is loaded.
     if (!macrosData) {
